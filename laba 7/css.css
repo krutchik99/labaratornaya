@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    background-color: #14471E;
+}
+.logo{
+    margin: 5px;
+    float: left;
+    width: 70px;
+    color: #DA6A00;
+}
+nav{
+    display: flex;
+    margin: 10px;
+    margin-top: 25px;
+    justify-content: center;
+    color: #DA6A00;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #DA6A00;
+}
+body {
+    background-color: #C8D2D1;
+}
+.content {
+    display: flex;
+    padding: 20px;
+}
+.articles .article {
+    margin: 100px;
+}
+.articles img {
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin: 20px;
+}
+.sidebar {
+    flex: 1;
+    padding-left: 20px;
+}
+.sidebar .banner {
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+}
+.search {
+    margin-bottom: 120px;
+    margin-top: 100px;
+}
+.search input {
+    width: 100%;
+    padding: 5px;
+    color: #EE9B01;
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #DA6A00;
+}
+.footer-column {
+    width: 45%;
+}
+.footer-column h3 {
+    margin-bottom: 10px;
+}
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+}
+
+.icons a img{
+    height: 30px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    max-height: 30px;
+}
+.icons a{
+    width: fit-content;
+    text-decoration: none;
+    text-align: center;
+    margin: 4px;
+    margin-top: 30px;
+}
+/* Для экранов меньше 900px */
+@media (max-width: 900px) {
+    .articles .article{
+          width: calc(50% - 20px);  /* 2 элемента в ряд */
+    }
+  }
+  
+  /* Для экранов меньше 768px */
+  @media (max-width: 668px) {
+       header{
+          flex-direction: column; /* Меняем направление на вертикальное */
+          align-items: center;
+          height: auto; /* Высота автоматически подстраивается */
+       }
+  
+       nav{
+          flex-direction: column;  /*  Меняем направление на вертикальное */
+       }
+  
+       nav a {
+           padding: 5px;  /* Меньше отступы для компактности */
+      }
+      .content{
+          flex-direction: column;  /* Меняем направление на вертикальное */
+      }
+      .articles .article{
+          width: 100%;  /* 1 элемент в ряд */
+      }
+      .footer-column {
+          width: 100%;  /* Занимают всю ширину */
+          text-align: center; /* Центрируем текст в колонках */
+      }
+  }
+  
+  
+  /* Для экранов меньше 500px */
+  @media (max-width: 500px){
+  
+      .articles .article{
+           width:100%;
+      }
+  }
